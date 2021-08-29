@@ -35,7 +35,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-//Modify Date = 12-22-2020
+//Modify Date = 4-23-2021
 #define CONFIGURATION_H_VERSION 020008
 
 //===========================================================================
@@ -297,7 +297,7 @@
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
 // For the other hotends it is their distance from the extruder 0 hotend.
 #define HOTEND_OFFSET_X { 0.0, -24.00 } // (mm) relative X-offset for each nozzle
-#define HOTEND_OFFSET_Y { 0.0, -0.50 }  // (mm) relative Y-offset for each nozzle
+#define HOTEND_OFFSET_Y { 0.0, -1.40 }  // (mm) relative Y-offset for each nozzle
 #define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
 
 // @section machine
@@ -799,7 +799,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.6, 80, 403, 137, 96 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.6, 80, 403, 137, 137 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1061,10 +1061,10 @@
 #define XY_PROBE_FEEDRATE (133*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_SPEED_FAST 6*60 //HOMING_FEEDRATE_Z
+#define Z_PROBE_FEEDRATE_FAST 6*60 //HOMING_FEEDRATE_Z
 
 // Feedrate (mm/min) for the "accurate" probe of each point
-#define Z_PROBE_SPEED_SLOW 2*60 //(Z_PROBE_SPEED_FAST / 2)
+#define Z_PROBE_FEEDRATE_SLOW 2*60 //(Z_PROBE_SPEED_FAST / 2)
 
 /**
  * Probe Activation Switch
